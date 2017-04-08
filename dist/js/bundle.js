@@ -12,10 +12,6 @@ angular.module('weatherApp', ['ui.router']).config(function ($stateProvider, $ur
     url: '/compare',
     templateUrl: './view/compare.html',
     controller: 'compareCtrl'
-  }).state('local', {
-    url: '/local',
-    templateUrl: './view/localWeather.html',
-    controller: 'localCtrl'
   }).state('fiveday', {
     url: '/fiveday',
     templateUrl: './view/fiveDayForecast.html',
@@ -30,14 +26,14 @@ angular.module('weatherApp').controller('compareCtrl', function ($scope, service
 
   $scope.getWeather1 = function (input) {
     $scope.cityData1 = false;
-    console.log(input);
+    // console.log(input);
     if (Number(input) && input.length === 5) {
-      console.log('I found a zip code');
+      // console.log('I found a zip code');
       service.getWeatherByZip(input).then(function (response) {
         $scope.cityData1 = response;
       });
     } else {
-      console.log('I found a city');
+      // console.log('I found a city');
       service.getWeatherByCity(input).then(function (response) {
         $scope.cityData1 = response;
       });
@@ -47,14 +43,14 @@ angular.module('weatherApp').controller('compareCtrl', function ($scope, service
 
   $scope.getWeather2 = function (input) {
     $scope.cityData2 = false;
-    console.log(input);
+    // console.log(input);
     if (Number(input) && input.length === 5) {
-      console.log('I found a zip code');
+      // console.log('I found a zip code');
       service.getWeatherByZip(input).then(function (response) {
         $scope.cityData2 = response;
       });
     } else {
-      console.log('I found a city');
+      // console.log('I found a city');
       service.getWeatherByCity(input).then(function (response) {
         $scope.cityData2 = response;
       });
@@ -64,14 +60,14 @@ angular.module('weatherApp').controller('compareCtrl', function ($scope, service
 
   $scope.getWeather3 = function (input) {
     $scope.cityData3 = false;
-    console.log(input);
+    // console.log(input);
     if (Number(input) && input.length === 5) {
-      console.log('I found a zip code');
+      // console.log('I found a zip code');
       service.getWeatherByZip(input).then(function (response) {
         $scope.cityData3 = response;
       });
     } else {
-      console.log('I found a city');
+      // console.log('I found a city');
       service.getWeatherByCity(input).then(function (response) {
         $scope.cityData3 = response;
       });
@@ -83,27 +79,21 @@ angular.module('weatherApp').controller('compareCtrl', function ($scope, service
 
 angular.module('weatherApp').controller('fiveDayCtrl', function ($scope, service) {
 
-  $scope.today = moment().add(0, 'days');
-
   $scope.forecastDays;
 
   $scope.getForecast = function (input) {
     $scope.forecast = false;
-    //console.log(input);
     if (Number(input) && input.length === 5) {
-      //console.log('I found a zip code');
       service.getForecastByZip(input).then(function (response) {
         for (var i = 0; i < 5; i++) {
           response[i].dt_txt = moment().add(i, 'days').format('dddd');
           switch (response[i].weather[0].main) {
             case 'Rain':
-              response.weatherIcon = '.jpg';
+              response.weatherIcon = '.jpg'; /* <--------- enter image */
               break;
+            // finish this for images of weather
           }
         }
-
-        console.log(response);
-
         $scope.forecast = response;
       });
     } else {
@@ -115,6 +105,7 @@ angular.module('weatherApp').controller('fiveDayCtrl', function ($scope, service
             case 'Rain':
               response.weatherIcon = '.jpg';
               break;
+            // finish this for images of weather
           }
         }
         $scope.forecast = response;
@@ -155,9 +146,6 @@ angular.module('weatherApp').controller('homeCtrl', function ($scope, service) {
     $scope.searchLocation = '';
   };
 });
-'use strict';
-
-angular.module('weatherApp').controller('localCtrl', function ($scope, service) {});
 'use strict';
 
 angular.module('weatherApp').service('service', function ($http) {

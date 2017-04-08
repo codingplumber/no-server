@@ -1,69 +1,105 @@
 <h1>compare</h1>
 
-<section>
-  <div>
-    <!-- first city -->
-    <form ng-submit="getWeather1(searchLocation1)">
-      <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation1"/>
-      <button type="submit" name="button"></button>
-    </form>
+<section class="compare-wrapper">
 
-    <div>
-      {{cityData1.name}}
+  <div class="compare-main-div">
+
+    <!-- FIRST CITY -->
+    <!-- submit cit/zip -->
+    <div class="compare-city">
+      <div class="compare-submit">
+        <form ng-submit="getWeather1(searchLocation1)">
+          <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation1"/>
+          <button type="submit" name="button"></button>
+        </form>
+      </div>
+
+      <!-- city 1 -->
+      <div class="compare-city-name">
+        {{cityData1.name}}
+      </div>
+
+      <!-- temp 1 -->
+      <div class="compare-temp">
+        Temp: {{cityData1.main.temp}}
+      </div>
+
+      <!-- hi/lo 1 -->
+      <div class="compare-hilo">
+        Max: {{cityData1.main.temp_max}}°
+        Min: {{cityData1.main.temp_min}}°
+      </div>
+
+      <!-- humidity 1 -->
+      <div class="compare-humidity">
+        Humidity: {{cityData1.main.humidity}}%
+      </div>
     </div>
-    <div>
-      Temp: {{cityData1.main.temp}}
+
+    <!-- SECOND CITY -->
+    <!-- submit -->
+    <div class="compare-city">
+      <div class="compare-submit">
+        <form ng-submit="getWeather2(searchLocation2)" class="compare-submit">
+          <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation2"/>
+          <button type="submit" name="button"></button>
+        </form>
+      </div>
+
+      <!-- city 2 -->
+      <div class="compare-city-name">
+        {{cityData2.name}}
+      </div>
+
+      <!-- temp 2 -->
+      <div class="compare-temp">
+        Temp: {{cityData2.main.temp}}
+      </div>
+
+      <!-- hi/lo 2 -->
+      <div class="compare-hilo">
+        Max: {{cityData2.main.temp_max}}°
+        Min: {{cityData2.main.temp_min}}°
+      </div>
+
+      <!-- humidity 2 -->
+      <div class="compare-humidity">
+        Humidity: {{cityData2.main.humidity}}%
+      </div>
     </div>
-    <div>
-      Max: {{cityData1.main.temp_max}}°
-      Min: {{cityData1.main.temp_min}}°
+
+    <!-- THIRD CITY -->
+    <!-- submit -->
+    <div class="compare-city">
+      <div class="compare-submit">
+        <form ng-submit="getWeather3(searchLocation3)" class="compare-submit">
+          <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation3"/>
+          <button type="submit" name="button"></button>
+        </form>
+      </div>
+
+      <!-- city 3 -->
+      <div class="compare-city-name">
+        {{cityData3.name}}
+      </div>
+
+      <!-- temp 3 -->
+      <div class="compare-temp">
+        Temp: {{cityData3.main.temp}}
+      </div>
+
+      <!-- hi/lo 3 -->
+      <div class="compare-hilo">
+        Max: {{cityData3.main.temp_max}}°
+        Min: {{cityData3.main.temp_min}}°
+      </div>
+
+      <!-- humidity 3 -->
+      <div class="compare-humidity">
+        Humidity: {{cityData3.main.humidity}}%
+      </div>
     </div>
-    <div>
-      Humidity: {{cityData1.main.humidity}}%
-    </div>
+
   </div>
 
-  <div>
-    <!-- second city -->
-    <form ng-submit="getWeather2(searchLocation2)">
-      <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation2"/>
-      <button type="submit" name="button"></button>
-    </form>
-
-    <div>
-      {{cityData2.name}}
-    </div>
-    <div>
-      Temp: {{cityData2.main.temp}}
-    </div>
-    <div>
-      Max: {{cityData2.main.temp_max}}°
-      Min: {{cityData2.main.temp_min}}°
-    </div>
-    <div>
-      Humidity: {{cityData2.main.humidity}}%
-    </div>
-  </div>
-
-  <div>
-    <!-- third city -->
-    <form ng-submit="getWeather3(searchLocation3)">
-      <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation3"/>
-      <button type="submit" name="button"></button>
-    </form>
-
-    <div>
-      {{cityData3.name}}
-    </div>
-    <div>
-      Temp: {{cityData3.main.temp}}
-    </div>
-    <div>
-      Max: {{cityData3.main.temp_max}}°
-      Min: {{cityData3.main.temp_min}}°
-    </div>
-    <div>
-      Humidity: {{cityData3.main.humidity}}% 
-    </div>
-  </div>
 </section>

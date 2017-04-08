@@ -1,31 +1,40 @@
 <h1>home</h1>
 
-<div>
-  <!-- enter city/zip -->
-  <form ng-submit="getWeather(searchLocation)">
-    <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation"/>
-    <button type="submit" name="button" ng-click="tempToday=true;"></button>
-  </form>
+<section class="home-wrapper">
+  <!-- submit city/zip -->
+  <div class="home-submit">
+    <form ng-submit="getWeather(searchLocation)">
+      <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation"/>
+      <button type="submit" name="button" ng-click="tempToday=true;"></button>
+    </form>
+  </div>
 
-<section>
-  <div ng-if="tempToday">
-    <div>
+  <!-- city -->
+  <div ng-if="tempToday" class="home-forecast">
+    <div class="home-city">
       Forecast for: {{cityData.name}}
     </div>
-    Temp: {{cityData.main.temp}}°
-    Max: {{cityData.main.temp_max}}°
-    Min: {{cityData.main.temp_min}}°
-    Humidity: {{cityData.main.humidity}}%
-  <div>
+
+    <!-- temp -->
+    <div class="home-temp">
+      <p>Temp: {{cityData.main.temp}}°</p>
+    </div>
+
+    <!-- hi/lo -->
+    <div class="home-hilo">
+      <p>Max: {{cityData.main.temp_max}}°</p>
+      <p>Min: {{cityData.main.temp_min}}°</p>
+    </div>
+
+    <!-- humidity -->
+    <div class="home-humidity">
+      <p>Humidity: {{cityData.main.humidity}}%</p>
+    </div>
+  </div>
+
+  <!-- error box -->
+  <div class="home-error-box">
+    <div class="error-handler" ng-if="!cityData" style="background-color: red; height: 10px; width: 50px"></div>
+  </div>
+
 </section>
-</div>
-<div class="error-handler" ng-if="!cityData" style="background-color: red; height: 10px; width: 50px">
-
-</div>
-
-
-
-<div>
-  <!-- your local weather -->
-
-</div>

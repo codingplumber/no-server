@@ -14,11 +14,6 @@ angular.module('weatherApp', ['ui.router'])
       templateUrl: './view/compare.html',
       controller: 'compareCtrl'
     })
-    .state('local', {
-      url: '/local',
-      templateUrl: './view/localWeather.html',
-      controller: 'localCtrl'
-    })
     .state('fiveday', {
       url: '/fiveday',
       templateUrl: './view/fiveDayForecast.html',
