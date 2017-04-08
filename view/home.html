@@ -2,11 +2,30 @@
 
 <div>
   <!-- enter city/zip -->
-  <input type="text" name="" value=""/>
-  <button type="button" name="button"></button>
+  <form ng-submit="getWeather(searchLocation)">
+    <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation"/>
+    <button type="submit" name="button" ng-click="tempToday=true;"></button>
+  </form>
+
+<section>
+  <div ng-if="tempToday">
+    <div>
+      Forecast for: {{cityData.name}}
+    </div>
+    Temp: {{cityData.main.temp}}°
+    Max: {{cityData.main.temp_max}}°
+    Min: {{cityData.main.temp_min}}°
+    Humidity: {{cityData.main.humidity}}%
+  <div>
+</section>
 </div>
+<div class="error-handler" ng-if="!cityData" style="background-color: red; height: 10px; width: 50px">
+
+</div>
+
+
 
 <div>
   <!-- your local weather -->
-  <button type="button" name="button"></button>
+
 </div>

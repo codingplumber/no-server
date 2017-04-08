@@ -3,27 +3,49 @@ angular.module('weatherApp')
 
   let key = '487aa862147eca2e1534962f9c5e1767';
 
-  let weatherCity = 'api.openweathermap.org/data/2.5/weather?q=';  /*{city name}*/
+  let weatherCity = 'http://api.openweathermap.org/data/2.5/weather?q=';  /*{city name}*/
 
-  let weatherZip = 'api.openweathermap.org/data/2.5/weather?zip='  /*{zip code}*/
+  let weatherZip = 'http://api.openweathermap.org/data/2.5/weather?zip=';  /*{zip code}*/
 
-  var getWeatherByCity = function(city) {
+  let forecastCity = 'http://api.openweathermap.org/data/2.5/forecast?q=';
+
+  let forecastZip = 'http://api.openweathermap.org/data/2.5/forecast?zip=';
+
+  this.getWeatherByCity = function(city) {
+    //console.log(city);
     return $http({
-      metod: 'GET',
-      url: weatherCity + city + '&units=imperial' + 'APPID=' + key;
-    })then(function(res) {
-      console.log(res.data);
-      // return res.data;
+      method: 'GET',
+      url: weatherCity + city + '&units=imperial&APPID=' + key
+    }).then(function(response) {
+      return response.data;
     });
   };
 
-  var getWeatherByCity = function(zip) {
+  this.getWeatherByZip = function(zip) {
+    //console.log('zip');
     return $http({
-      metod: 'GET',
-      url: weatherCity + zip + '&units=imperial' + 'APPID=' + key;
-    })then(function(res) {
-      console.log(res.data);
-      // return res.data;
+      method: 'GET',
+      url: weatherZip + zip + '&units=imperial&APPID=' + key
+    }).then(function(response) {
+      return response.data;
+    });
+  };
+
+  this.getForecastByCity = function(city) {
+    return $http({
+      method: 'GET',
+      url: forecastCity + city + '&units=imperial&APPID=' + key
+    }).then(function(response) {
+      return response.data.list;
+    });
+  };
+
+  this.getForecastByZip = function(zip) {
+    return $http({
+      method: 'GET',
+      url: forecastZip + zip + '&units=imperial&APPID=' + key
+    }).then(function(response) {
+      return response.data.list;
     });
   };
 
