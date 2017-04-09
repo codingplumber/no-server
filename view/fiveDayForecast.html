@@ -1,10 +1,9 @@
-<h1>Five Day Forecast page</h1>
 
 <!-- submit city/zip -->
 <div class="fiveday-submit">
   <form ng-submit="getForecast(searchLocation)">
-    <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation"/>
-    <button type="submit" name="button" ng-click="forecastDays=true;"></button>
+    <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation" class="fiveday-input"/>
+    <button type="submit" name="button" ng-click="forecastDays=true;" class="fiveday-button"></button>
   </form>
 </div>
 
@@ -15,30 +14,33 @@
 
     <!-- day of the week -->
     <div class="fiveday-day">
-      <p>Day: {{day.dt_txt}}</p>
+      <p>{{day.dt_txt}}</p>
     </div>
 
     <!-- hi/lo -->
     <div class="fiveday-hilo">
-      <div class="fiveday-high">
-        <p>High: {{day.main.temp_max}}°</p>
+      <div class="fiveday-hi">
+        <p><span class="fiveday-high">High:</span> {{day.main.temp_max}}°</p>
       </div>
-      <div class="fiveday-low">
-        <p>Low: {{day.main.temp_min}}°</p>
+      <div class="fiveday-lo">
+        <p><span class="fiveday-low">Low:</span> {{day.main.temp_min}}°</p>
       </div>
     </div>
 
-    <!-- weather & humidity description -->
-    <div class="fiveday-weather-humidity-main">
+    <!-- humidity -->
+    <div class="fiveday-humidity">
+      <p>Humidity: {{day.main.humidity}}%</p>
+    </div>
+
+    <!-- weather and icon -->
+    <div class="fiveday-weather-icon">
       <!-- weather -->
       <div class="fiveday-weather">
-        <p>Weather: {{day.weather[0].description}}</p>
-        <!-- Icon: <img ng-src="{{day.weatherIcon}}" alt=""/> -->
+        <p>{{day.weather[0].description}}</p>
       </div>
-
-      <!-- humidity -->
-      <div class="fiveday-humidity">
-        <p>Humidity: {{day.main.humidity}}%</p>
+      <!-- weather image -->
+      <div class="fiveday-icon">
+        <!--<div class="icon">{{day.weatherIcon}}</div>--><img ng-src="{{day.weatherIcon}}" alt=""/>
       </div>
     </div>
 

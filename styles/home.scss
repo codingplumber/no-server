@@ -6,6 +6,7 @@
   color: white;
   border-radius: 40px;
   padding-top: 20px;
+  margin-top: 50px;
 }
 
 .home-submit {
@@ -20,7 +21,7 @@
   width: 300px;
   border-radius: 10px;
   font-size: 15px;
-  font-stretch: expanded;
+  text-align: center;
 }
 
 .home-button {
@@ -37,10 +38,12 @@
   font-size: 25px;
   font-weight: bold;
   background: white;
+  border: 1px solid blue;
+  border-radius: 20px;
 }
 
 .home-forecast > div {
-  border: 1px solid blue;
+  border-bottom: 1px solid blue;
   padding: 20px 0;
 }
 

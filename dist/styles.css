@@ -1,7 +1,8 @@
 .compare-main-div {
   display: flex;
   justify-content: space-between;
-  font-size: 20px; }
+  font-size: 20px;
+  margin-top: 40px; }
 
 .compare-city {
   height: 500px;
@@ -14,13 +15,15 @@
   padding-top: 15px; }
 
 .compare-submit {
-  padding-bottom: 50px;
-  height: 40px; }
+  height: 40px;
+  margin-bottom: 75px; }
 
 .compare-input {
   height: 40px;
   width: 240px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center; }
 
 .compare-button {
   height: 40px;
@@ -40,11 +43,107 @@
   border-bottom: 1px solid blue;
   padding: 20px 0; }
 
+.compare-city-name {
+  font-weight: bolder; }
+
 .compare-max {
   color: red; }
 
 .compare-min {
   color: blue; }
+
+.fiveday-submit {
+  height: 40px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center; }
+
+.fiveday-input {
+  height: 40px;
+  width: 400px;
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: center; }
+
+.fiveday-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px; }
+
+.fiveday-wrapper {
+  height: 500px;
+  width: 1250px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50px;
+  border: 1px solid blue; }
+
+.fiveday-main-div {
+  height: 100px;
+  border-bottom: 1px solid blue;
+  display: flex;
+  justify-content: flex-start;
+  color: white; }
+
+.fiveday-day {
+  width: 200px;
+  border-right: 1px solid blue;
+  text-align: center;
+  font-size: 30px; }
+
+.fiveday-day p {
+  padding-top: 32px; }
+
+.fiveday-hilo {
+  width: 300px;
+  border-right: 1px solid blue;
+  text-align: center; }
+
+.fiveday-hi {
+  padding-top: 20px;
+  font-size: 25px; }
+
+.fiveday-high {
+  color: red; }
+
+.fiveday-lo {
+  padding-top: 10px;
+  font-size: 25px; }
+
+.fiveday-low {
+  color: blue; }
+
+.fiveday-humidity {
+  width: 300px;
+  border-right: 1px solid blue;
+  text-align: center;
+  font-size: 25px; }
+
+.fiveday-humidity p {
+  padding-top: 32px; }
+
+.fiveday-weather-icon {
+  width: 400px;
+  display: flex;
+  justify-content: space-between; }
+
+.fiveday-weather {
+  font-size: 25px;
+  padding-top: 33px;
+  margin-left: 50px; }
+
+.fiveday-icon {
+  height: 90px;
+  width: 90px;
+  margin-right: 40px;
+  margin-top: 5px;
+  background: white;
+  border-radius: 45px; }
+
+.fiveday-icon img {
+  color: white;
+  margin-left: 20px;
+  margin-top: 20px; }
 
 .header-wrapper {
   background: rgba(0, 0, 0, 0.8);
@@ -81,7 +180,8 @@
   background: rgba(0, 0, 0, 0.8);
   color: white;
   border-radius: 40px;
-  padding-top: 20px; }
+  padding-top: 20px;
+  margin-top: 50px; }
 
 .home-submit {
   width: 100%;
@@ -94,7 +194,7 @@
   width: 300px;
   border-radius: 10px;
   font-size: 15px;
-  font-stretch: expanded; }
+  text-align: center; }
 
 .home-button {
   height: 40px;
@@ -109,10 +209,12 @@
   color: black;
   font-size: 25px;
   font-weight: bold;
-  background: white; }
+  background: white;
+  border: 1px solid blue;
+  border-radius: 20px; }
 
 .home-forecast > div {
-  border: 1px solid blue;
+  border-bottom: 1px solid blue;
   padding: 20px 0; }
 
 .home-max {
@@ -129,8 +231,7 @@
   background: url("http://tberry30.github.io/weatherApp/assets/images/rain_drops.jpg"); }
 
 .index-header {
-  width: 100%;
-  padding-bottom: 30px; }
+  width: 100%; }
 
 .index-view {
   display: flex;

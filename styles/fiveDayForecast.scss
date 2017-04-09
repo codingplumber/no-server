@@ -1,0 +1,112 @@
+
+.fiveday-submit {
+  height: 40px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.fiveday-input {
+  height: 40px;
+  width: 400px;
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.fiveday-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+}
+
+.fiveday-wrapper {
+  height: 500px;
+  width: 1250px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50px;
+  border: 1px solid blue;
+}
+
+.fiveday-main-div {
+  height: 100px;
+  border-bottom: 1px solid blue;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+}
+
+.fiveday-day {
+  width: 200px;
+  border-right: 1px solid blue;
+  text-align: center;
+  font-size: 30px;
+}
+
+.fiveday-day p {
+  padding-top: 32px;
+}
+
+.fiveday-hilo {
+  width: 300px;
+  border-right: 1px solid blue;
+  text-align: center;
+}
+
+.fiveday-hi {
+  padding-top: 20px;
+    font-size: 25px;
+}
+
+.fiveday-high {
+  color: red;
+
+}
+
+.fiveday-lo {
+  padding-top: 10px;
+    font-size: 25px;
+}
+
+.fiveday-low {
+  color: blue;
+}
+
+.fiveday-humidity {
+  width: 300px;
+  border-right: 1px solid blue;
+  text-align: center;
+  font-size: 25px;
+}
+
+.fiveday-humidity p {
+  padding-top: 32px;
+}
+
+.fiveday-weather-icon {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fiveday-weather {
+  font-size: 25px;
+  padding-top: 33px;
+  margin-left: 50px;
+}
+
+.fiveday-icon {
+  height: 90px;
+  width: 90px;
+  margin-right: 40px;
+  margin-top: 5px;
+  background: white;
+  border-radius: 45px;
+}
+
+.fiveday-icon img {
+  color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+}

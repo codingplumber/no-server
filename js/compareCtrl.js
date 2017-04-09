@@ -9,15 +9,12 @@ angular.module('weatherApp')
 
   $scope.getWeather1 = function(input) {
     $scope.cityData1 = false;
-    // console.log(input);
     if (Number(input) && input.length === 5) {
-      // console.log('I found a zip code');
         service.getWeatherByZip(input).then(function(response) {
           $scope.cityData1 = response;
 
         });
     } else {
-      // console.log('I found a city');
         service.getWeatherByCity(input).then(function(response) {
           $scope.cityData1 = response;
         });
@@ -27,15 +24,12 @@ angular.module('weatherApp')
 
   $scope.getWeather2 = function(input) {
     $scope.cityData2 = false;
-    // console.log(input);
     if (Number(input) && input.length === 5) {
-      // console.log('I found a zip code');
         service.getWeatherByZip(input).then(function(response) {
           $scope.cityData2 = response;
 
         });
     } else {
-      // console.log('I found a city');
         service.getWeatherByCity(input).then(function(response) {
           $scope.cityData2 = response;
         });
@@ -45,15 +39,12 @@ angular.module('weatherApp')
 
   $scope.getWeather3 = function(input) {
     $scope.cityData3 = false;
-    // console.log(input);
     if (Number(input) && input.length === 5) {
-      // console.log('I found a zip code');
         service.getWeatherByZip(input).then(function(response) {
           $scope.cityData3 = response;
 
         });
     } else {
-      // console.log('I found a city');
         service.getWeatherByCity(input).then(function(response) {
           $scope.cityData3 = response;
         });
