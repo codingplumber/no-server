@@ -2,14 +2,20 @@
 <html ng-app="weatherApp">
   <head>
     <meta charset="utf-8">
-    <style src="dist/styles.css"></style>
+    <link rel="stylesheet" href="./dist/styles.css">
     <title>Weather No-Server Project</title>
   </head>
-  <body>   <!-- /*ng-controller="compareCtrl" -->
+  <body class="index-wrapper">   <!-- /*ng-controller="compareCtrl" -->
 
-    <header-directive></header-directive>
+    <!-- header -->
+    <section class="index-header">
+      <header-directive></header-directive>
+    </section>
 
-    <ui-view></ui-view>
+    <!-- view -->
+    <section class="index-view">
+      <ui-view></ui-view>
+    </section>
 
     <!-- moment script below -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>

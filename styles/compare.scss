@@ -1,0 +1,60 @@
+
+.compare-main-div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.compare-city {
+  height: 500px;
+  width: 350px;
+  background: rgba(0, 0, 0, 0.8);
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 25px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.compare-submit {
+  padding-bottom: 50px;
+  height: 40px;
+  // position: relative;
+}
+
+.compare-input {
+  height: 40px;
+  width: 240px;
+  border-radius: 10px;
+  // position: absolute;
+}
+
+.compare-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  // position: absolute;
+}
+
+.compare-city-results {
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  color: black;
+  background: white;
+  border: 1px solid blue;
+  border-radius: 20px;
+}
+
+.compare-city-results > div {
+  border-bottom: 1px solid blue;
+  padding: 20px 0;
+}
+
+.compare-max {
+  color: red;
+}
+
+.compare-min {
+  color: blue;
+}

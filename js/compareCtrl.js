@@ -3,6 +3,10 @@ angular.module('weatherApp')
 
   $scope.cityData = true;
 
+  $scope.compareCity1;
+  $scope.compareCity2;
+  $scope.compareCity3;
+
   $scope.getWeather1 = function(input) {
     $scope.cityData1 = false;
     // console.log(input);

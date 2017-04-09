@@ -1,4 +1,3 @@
-<h1>compare</h1>
 
 <section class="compare-wrapper">
 
@@ -9,30 +8,32 @@
     <div class="compare-city">
       <div class="compare-submit">
         <form ng-submit="getWeather1(searchLocation1)">
-          <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation1"/>
-          <button type="submit" name="button"></button>
+          <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation1" class="compare-input"/>
+          <button type="submit" name="button" ng-click="compareCity1=true;" class="compare-button"></button>
         </form>
       </div>
 
       <!-- city 1 -->
-      <div class="compare-city-name">
-        {{cityData1.name}}
-      </div>
+      <div ng-if="compareCity1" class="compare-city-results">
+        <div class="compare-city-name">
+          {{cityData1.name}}
+        </div>
 
-      <!-- temp 1 -->
-      <div class="compare-temp">
-        Temp: {{cityData1.main.temp}}
-      </div>
+        <!-- temp 1 -->
+        <div class="compare-temp">
+          Temp: {{cityData1.main.temp}}°
+        </div>
 
-      <!-- hi/lo 1 -->
-      <div class="compare-hilo">
-        Max: {{cityData1.main.temp_max}}°
-        Min: {{cityData1.main.temp_min}}°
-      </div>
+        <!-- hi/lo 1 -->
+        <div class="compare-hilo">
+          <p><span class="compare-max">Max:</span> {{cityData1.main.temp_max}}°</p>
+          <p><span class="compare-min">Min:</span> {{cityData1.main.temp_min}}°</p>
+        </div>
 
-      <!-- humidity 1 -->
-      <div class="compare-humidity">
-        Humidity: {{cityData1.main.humidity}}%
+        <!-- humidity 1 -->
+        <div class="compare-humidity">
+          Humidity: {{cityData1.main.humidity}}%
+        </div>
       </div>
     </div>
 
@@ -40,31 +41,33 @@
     <!-- submit -->
     <div class="compare-city">
       <div class="compare-submit">
-        <form ng-submit="getWeather2(searchLocation2)" class="compare-submit">
-          <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation2"/>
-          <button type="submit" name="button"></button>
+        <form ng-submit="getWeather2(searchLocation2)" class="compare">
+          <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation2" class="compare-input"/>
+          <button type="submit" name="button" ng-click="compareCity2=true;" class="compare-button"></button>
         </form>
       </div>
 
       <!-- city 2 -->
-      <div class="compare-city-name">
-        {{cityData2.name}}
-      </div>
+      <div ng-if="compareCity2" class="compare-city-results">
+        <div class="compare-city-name">
+          {{cityData2.name}}
+        </div>
 
-      <!-- temp 2 -->
-      <div class="compare-temp">
-        Temp: {{cityData2.main.temp}}
-      </div>
+        <!-- temp 2 -->
+        <div class="compare-temp">
+          Temp: {{cityData2.main.temp}}°
+        </div>
 
-      <!-- hi/lo 2 -->
-      <div class="compare-hilo">
-        Max: {{cityData2.main.temp_max}}°
-        Min: {{cityData2.main.temp_min}}°
-      </div>
+        <!-- hi/lo 2 -->
+        <div class="compare-hilo">
+          <p><span class="compare-max">Max:</span> {{cityData2.main.temp_max}}°</p>
+          <p><span class="compare-min">Min:</span> {{cityData2.main.temp_min}}°</p>
+        </div>
 
-      <!-- humidity 2 -->
-      <div class="compare-humidity">
-        Humidity: {{cityData2.main.humidity}}%
+        <!-- humidity 2 -->
+        <div class="compare-humidity">
+          Humidity: {{cityData2.main.humidity}}%
+        </div>
       </div>
     </div>
 
@@ -72,31 +75,33 @@
     <!-- submit -->
     <div class="compare-city">
       <div class="compare-submit">
-        <form ng-submit="getWeather3(searchLocation3)" class="compare-submit">
-          <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation3"/>
-          <button type="submit" name="button"></button>
+        <form ng-submit="getWeather3(searchLocation3)">
+          <input type="text" placeholder="Enter City/Zip Code" ng-model="searchLocation3" class="compare-input"/>
+          <button type="submit" name="button" ng-click="compareCity3=true;" class="compare-button"></button>
         </form>
       </div>
 
       <!-- city 3 -->
-      <div class="compare-city-name">
-        {{cityData3.name}}
-      </div>
+      <div ng-if="compareCity3" class="compare-city-results">
+        <div class="compare-city-name">
+          {{cityData3.name}}
+        </div>
 
-      <!-- temp 3 -->
-      <div class="compare-temp">
-        Temp: {{cityData3.main.temp}}
-      </div>
+        <!-- temp 3 -->
+        <div class="compare-temp">
+          Temp: {{cityData3.main.temp}}°
+        </div>
 
-      <!-- hi/lo 3 -->
-      <div class="compare-hilo">
-        Max: {{cityData3.main.temp_max}}°
-        Min: {{cityData3.main.temp_min}}°
-      </div>
+        <!-- hi/lo 3 -->
+        <div class="compare-hilo">
+          <p><span class="compare-max">Max:</span> {{cityData3.main.temp_max}}°</p>
+          <p><span class="compare-min">Min:</span> {{cityData3.main.temp_min}}°</p>
+        </div>
 
-      <!-- humidity 3 -->
-      <div class="compare-humidity">
-        Humidity: {{cityData3.main.humidity}}%
+        <!-- humidity 3 -->
+        <div class="compare-humidity">
+          Humidity: {{cityData3.main.humidity}}%
+        </div>
       </div>
     </div>
 

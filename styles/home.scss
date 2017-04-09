@@ -1,0 +1,53 @@
+
+.home-wrapper {
+  height: 500px;
+  width: 600px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 40px;
+  padding-top: 20px;
+}
+
+.home-submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 65px;
+}
+
+.home-input {
+  height: 40px;
+  width: 300px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-stretch: expanded;
+}
+
+.home-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px; /*align button with input*/
+}
+
+.home-forecast {
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  background: white;
+}
+
+.home-forecast > div {
+  border: 1px solid blue;
+  padding: 20px 0;
+}
+
+.home-max {
+  color: red;
+}
+
+.home-min {
+  color: blue;
+}
