@@ -24,10 +24,16 @@
   text-align: center;
 }
 
+form {
+  display: flex;
+  align-items: center;
+}
+
 .home-button {
   height: 40px;
   width: 40px;
   border-radius: 10px; /*align button with input*/
+  margin-left: 15px;
 }
 
 .home-forecast {
