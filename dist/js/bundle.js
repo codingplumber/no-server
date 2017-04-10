@@ -16,6 +16,10 @@ angular.module('weatherApp', ['ui.router']).config(function ($stateProvider, $ur
     url: '/fiveday',
     templateUrl: './view/fiveDayForecast.html',
     controller: 'fiveDayCtrl'
+  }).state('randomcat', {
+    url: '/randomcat',
+    templateUrl: './view/randomCatView.html',
+    controller: 'randomCatCtrl'
   });
 });
 'use strict';
@@ -112,22 +116,22 @@ angular.module('weatherApp').controller('fiveDayCtrl', function ($scope, service
           response[i].dt_txt = moment().add(i, 'days').format('dddd');
           switch (response[i].weather[0].main) {
             case 'Rain':
-              response.weatherIcon = './icons/Rain-50.png';
+              response[i].weatherIcon = './icons/Rain-50.png';
               break;
             case 'Clear':
-              response.weatherIcon = './icons/Sun-50.png';
+              response[i].weatherIcon = './icons/Sun-50.png';
               break;
             case 'Clouds':
-              response.weatherIcon = './icons/Cloud-50.png';
+              response[i].weatherIcon = './icons/Cloud-50.png';
               break;
             case 'Snow':
-              response.weatherIcon = './icons/Snow-50.png';
+              response[i].weatherIcon = './icons/Snow-50.png';
               break;
             case 'Thunderstorm':
-              response.weatherIcon = './icons/Cloud Lightning-50.png';
+              response[i].weatherIcon = './icons/Cloud Lightning-50.png';
               break;
             case 'Drizzle':
-              response.weatherIcon = './icons/Rain-50.png';
+              response[i].weatherIcon = './icons/Rain-50.png';
               break;
           }
         }
@@ -171,6 +175,9 @@ angular.module('weatherApp').controller('homeCtrl', function ($scope, service) {
 });
 'use strict';
 
+angular.module('weatherApp').controller('randomCatCtrl', function ($scope, service) {});
+'use strict';
+
 angular.module('weatherApp').service('service', function ($http) {
 
   var key = '487aa862147eca2e1534962f9c5e1767';
@@ -184,7 +191,6 @@ angular.module('weatherApp').service('service', function ($http) {
   var forecastZip = 'http://api.openweathermap.org/data/2.5/forecast?zip=';
 
   this.getWeatherByCity = function (city) {
-    //console.log(city);
     return $http({
       method: 'GET',
       url: weatherCity + city + '&units=imperial&APPID=' + key
@@ -194,7 +200,6 @@ angular.module('weatherApp').service('service', function ($http) {
   };
 
   this.getWeatherByZip = function (zip) {
-    //console.log('zip');
     return $http({
       method: 'GET',
       url: weatherZip + zip + '&units=imperial&APPID=' + key

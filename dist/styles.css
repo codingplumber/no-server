@@ -43,6 +43,9 @@
   border-bottom: 1px solid blue;
   padding: 20px 0; }
 
+.compare-city-results > div:last-of-type {
+  border-bottom: none; }
+
 .compare-city-name {
   font-weight: bolder; }
 
@@ -84,6 +87,9 @@
   display: flex;
   justify-content: flex-start;
   color: white; }
+
+.fiveday-main-div:last-of-type {
+  border-bottom: none; }
 
 .fiveday-day {
   width: 200px;
@@ -158,6 +164,9 @@
   padding-bottom: 45px;
   padding-top: 10px; }
 
+.header-title-div h1 {
+  cursor: url(http://cur.cursors-4u.net/user/use-1/use168.cur), progress !important; }
+
 .title {
   font-size: 100px;
   font-weight: bolder; }
@@ -170,7 +179,7 @@
 
 .header-text {
   text-decoration: none;
-  cursor: pointer;
+  cursor: url(http://cur.cursors-4u.net/nature/nat-11/nat1022.cur), progress !important;
   font-size: 25px;
   margin: auto; }
 
@@ -217,6 +226,9 @@
   border-bottom: 1px solid blue;
   padding: 20px 0; }
 
+.home-forecast > div:last-of-type {
+  border-bottom: none; }
+
 .home-max {
   color: red; }
 
@@ -238,6 +250,21 @@
   justify-content: center;
   align-items: center;
   border: 75px; }
+
+.cat-wrapper {
+  height: 500px;
+  width: 600px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin-top: 50px; }
+
+.cat-wrapper img {
+  height: 400px;
+  width: 500px;
+  border-radius: 40px; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

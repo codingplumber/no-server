@@ -1,0 +1,17 @@
+
+.cat-wrapper {
+  height: 500px;
+  width: 600px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin-top: 50px;
+}
+
+.cat-wrapper img {
+  height: 400px;
+  width: 500px;
+  border-radius: 40px;
+}

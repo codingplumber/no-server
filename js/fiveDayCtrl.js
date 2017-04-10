@@ -39,22 +39,22 @@ angular.module('weatherApp')
             response[i].dt_txt = moment().add(i, 'days').format('dddd');
             switch (response[i].weather[0].main) {
               case 'Rain':
-              response.weatherIcon = './icons/Rain-50.png'
+              response[i].weatherIcon = './icons/Rain-50.png'
               break;
               case 'Clear':
-              response.weatherIcon = './icons/Sun-50.png'
+              response[i].weatherIcon = './icons/Sun-50.png'
               break;
               case 'Clouds':
-              response.weatherIcon = './icons/Cloud-50.png'
+              response[i].weatherIcon = './icons/Cloud-50.png'
               break;
               case 'Snow':
-              response.weatherIcon = './icons/Snow-50.png'
+              response[i].weatherIcon = './icons/Snow-50.png'
               break;
               case 'Thunderstorm':
-              response.weatherIcon = './icons/Cloud Lightning-50.png'
+              response[i].weatherIcon = './icons/Cloud Lightning-50.png'
               break;
               case 'Drizzle':
-              response.weatherIcon = './icons/Rain-50.png'
+              response[i].weatherIcon = './icons/Rain-50.png'
               break;
             }
           }

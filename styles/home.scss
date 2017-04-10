@@ -47,6 +47,10 @@
   padding: 20px 0;
 }
 
+.home-forecast > div:last-of-type {
+  border-bottom: none;
+}
+
 .home-max {
   color: red;
 }

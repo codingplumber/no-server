@@ -12,7 +12,6 @@ angular.module('weatherApp')
   let forecastZip = 'http://api.openweathermap.org/data/2.5/forecast?zip=';
 
   this.getWeatherByCity = function(city) {
-    //console.log(city);
     return $http({
       method: 'GET',
       url: weatherCity + city + '&units=imperial&APPID=' + key
@@ -22,7 +21,6 @@ angular.module('weatherApp')
   };
 
   this.getWeatherByZip = function(zip) {
-    //console.log('zip');
     return $http({
       method: 'GET',
       url: weatherZip + zip + '&units=imperial&APPID=' + key
@@ -48,5 +46,6 @@ angular.module('weatherApp')
       return response.data.list;
     });
   };
+
 
 });

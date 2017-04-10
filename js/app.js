@@ -19,5 +19,10 @@ angular.module('weatherApp', ['ui.router'])
       templateUrl: './view/fiveDayForecast.html',
       controller: 'fiveDayCtrl'
     })
+    .state('randomcat', {
+      url: '/randomcat',
+      templateUrl: './view/randomCatView.html',
+      controller: 'randomCatCtrl'
+    })
 
 });
